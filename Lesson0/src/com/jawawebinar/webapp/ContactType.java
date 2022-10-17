@@ -1,5 +1,18 @@
 package com.jawawebinar.webapp;
 
 public enum ContactType {
-    PHONE, MOBILE, HOME_PHONE, WHATSAPP, MAIL
+    PHONE("Telefono"),
+    MOBILE("Telefono movil"),
+    HOME_PHONE("Telefono de casa"),
+    WHATSAPP("Whatsapp"),
+    MAIL("Email");
+    private String title;
+
+    ContactType(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
+    }
 }
