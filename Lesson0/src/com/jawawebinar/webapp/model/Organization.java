@@ -1,4 +1,4 @@
-package com.jawawebinar.webapp;
+package com.jawawebinar.webapp.model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.jawawebinar.webapp;
+package com.jawawebinar.webapp.model;
 
 import java.util.Objects;
 
@@ -31,6 +31,14 @@ public class Link {
 //        return super.equals(obj);
 //    }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
 
     @Override
     public boolean equals(Object o) {

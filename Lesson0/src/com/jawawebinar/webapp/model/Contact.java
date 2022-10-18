@@ -1,4 +1,4 @@
-package com.jawawebinar.webapp;
+package com.jawawebinar.webapp.model;
 
 public class Contact {
    private final ContactType type;
