@@ -6,7 +6,9 @@ import com.jawawebinar.webapp.storage.IStorage;
 import java.util.Collection;
 
 public class ArrayStorage implements IStorage {
-    private Resume[] array = new Resume[100];
+    private static final int LIMIT = 100; // Creacion de una constante alt+ctr+c
+    private Resume[] array = new Resume[LIMIT];
+
 
 
 
@@ -18,7 +20,18 @@ public class ArrayStorage implements IStorage {
 
     @Override
     public void save(Resume r) {
-
+        int idx = -1;
+        for(int i = 0; i<LIMIT; i++){
+            Resume resume = array[i]; // alt+ctr+v Para crear como elemento resume[i]
+            if(resume != null){
+                if(r.equals(resume)){
+                    throw new IllegalStateException("Already present");
+                }
+            }else if(idx == -1){
+                idx = i;
+            }
+        }
+        array[idx]=r;
     }
 
     @Override
