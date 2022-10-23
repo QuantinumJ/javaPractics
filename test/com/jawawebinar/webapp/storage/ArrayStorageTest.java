@@ -72,17 +72,15 @@ public class ArrayStorageTest {
 
     @org.junit.Test
     public void load() {
-    	Resume felip = new Resume(" Felipe Gonxales", " CALLE X");
-    	storage.save(felip);
-    	storage.load(felip.getUuid());
+    	storage.load(R2.getUuid());
     }
 
     @org.junit.Test
     public void testDelete() {
 
-            storage.delete(R1.getUuid());
+            storage.delete(R3.getUuid());
         Assert.assertEquals(2,storage.size());
-        Assert.assertEquals(null,storage.load(R1.getUuid()));
+        // Assert.assertEquals(null,storage.load(R1.getUuid()));
 
     }
 
